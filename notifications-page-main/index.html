@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Notifications page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @font-face {
+        font-family: PlusJarkataSans;
+        src: url(/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+        src: url(/assets/fonts/static/PlusJakartaSans-ExtraBold.ttf);
+        src: url(/assets/fonts/static/PlusJakartaSans-Medium.ttf);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        background-color: hsl(210, 60%, 98%);
+        color: hsl(219, 12%, 42%);
+        flex-direction: column;
+        align-items: center;
+        font-family: "PlusJarkataSans", sans-serif;
+        font-weight: 200;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 10px;
+      }
+      .container {
+        background-color: hsl(0, 0%, 100%);
+        margin-top: 50px;
+        border-radius: 10px;
+        width: 700px;
+        padding: 20px 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.09);
+      }
+      button {
+        background: none;
+        border: none;
+        align-items: center;
+        cursor: pointer;
+        color: hsl(219, 12%, 42%);
+        transition: all 0.4s;
+      }
+      button:hover {
+        font-weight: 700;
+        color: hsl(219, 85%, 26%);
+      }
+      .number-3 {
+        background-color: hsl(219, 85%, 26%);
+        color: hsl(210, 60%, 98%);
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 2px 10px;
+        display: inline-block;
+      }
+      h2 {
+        color: hsl(224, 21%, 14%);
+        font-weight: 800;
+      }
+      span {
+        color: hsl(224, 21%, 14%);
+        cursor: pointer;
+        font-weight: 800;
+      }
+      span:hover {
+        color: hsl(219, 85%, 26%);
+        font-weight: bold;
+      }
+      .heading {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        align-items: center;
+      }
+      p {
+        font-size: 16px;
+      }
+      .head {
+        display: flex;
+        gap: 20px;
+      }
+      img {
+        width: 40px;
+      }
+      .flex {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: hsl(205, 33%, 90%);
+        align-items: center;
+        /* justify-content: center; */
+      }
+      .time {
+        color: hsl(219, 12%, 42%);
+        margin-top: 4px;
+        font-size: 14px;
+      }
+      .chess {
+        color: hsl(219, 85%, 26%);
+      }
+      .chess-img {
+        width: 40px;
+        height: 40px;
+      }
+      .chess-img:hover {
+        cursor: pointer;
+      }
+      .box-4,
+      .box-5,
+      .box-6,
+      .box-7 {
+        background: none;
+        /* margin-bottom: 0; */
+      }
+      .p {
+        border: 2px solid hsl(219, 14%, 63%);
+        margin-left: 70px;
+        font-weight: 500;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        transition: all 0.4s;
+      }
+      .p:hover {
+        color: hsl(224, 21%, 14%);
+        background-color: hsl(205, 33%, 90%);
+        cursor: pointer;
+        border-style: none;
+      }
+      .flex-5 {
+        display: flex;
+        gap: 250px;
+        justify-content: space-between;
+      }
+      .bold-span {
+        font-weight: 500;
+      }
+      .circle {
+        background-color: hsl(1, 90%, 64%);
+        font-weight: 100;
+        font-size: 8px;
+        top: 20px;
+        justify-content: center;
+        align-items: center;
+        color: rgba(245, 245, 220, 0);
+        border-radius: 50%;
+      }
+      .c1 {
+        display: none;
+      }
+      .color {
+        background-color: hsl(0, 0%, 100%);
+      }
+      .hidden-2 {
+        display: none;
+        background: none;
+      }
+      @media (max-width: 420px) {
+        body {
+          font-size: 14px;
+          /* overflow-y: hidden; */
+        }
+        .container {
+          width: 320px;
+          padding: 20px 20px;
+        }
+        .number-3 {
+          font-size: 14px;
+        }
+        .chess-img {
+          width: 40px;
+          height: 40px;
+        }
+        .button {
+          font-size: 14px;
+        }
+        .flex-5 {
+          gap: 5px;
+        }
+        p {
+          font-size: 12px;
+        }
+        .flex {
+          font-size: 10px;
+          gap: 10px;
+          padding: 5px 0;
+        }
+      } ;
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <div class="head">
+          <h2>Notifications <span class="number-3">3</span></h2>
+        </div>
+        <button class="button">Mark all as read</button>
+      </div>
+
+      <div class="others">
+        <div class="box-1 colored flex">
+          <img src="/assets/images/avatar-mark-webber.webp" alt="Mark Webber" />
+          <div class="text">
+            <p>
+              <span>Mark Webber</span> reacted to your recent post
+              <span>My first tournament today!</span>
+              <span class="circle"> hi</span>
+            </p>
+            <p class="time">1m ago</p>
+          </div>
+        </div>
+
+        <div class="box-2 coloredd flex">
+          <img src="/assets/images/avatar-angela-gray.webp" alt="Angela Grey" />
+          <div class="text">
+            <p>
+              <span>Angela Gray</span> followed you
+              <span class="circle ee"> hi</span>
+            </p>
+            <p class="time">5m ago</p>
+          </div>
+        </div>
+
+        <div class="box-3 coloreddd flex">
+          <img
+            src="/assets/images/avatar-jacob-thompson.webp"
+            alt="Jacob Thompson"
+          />
+          <div class="text">
+            <p>
+              <span>Jacob Thompson</span> has joined your group
+              <span class="chess">Chess Club</span>
+              <span class="circle eee"> hi</span>
+            </p>
+            <p class="time">1 day ago</p>
+          </div>
+        </div>
+
+        <div class="box-4 flex">
+          <img src="/assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky" />
+          <div class="text">
+            <p>
+              <span>Rizky Hasanuddin</span> sent you a private message
+              <span></span>
+            </p>
+            <p class="time">5 days ago</p>
+          </div>
+        </div>
+        <p class="p">
+          Hello, thanks for setting up the Chess Club. I've been a member for a
+          few weeks now and I'm already having lots of fun and improving my
+          game.
+        </p>
+
+        <div class="box-5 flex">
+          <img src="/assets/images/avatar-kimberly-smith.webp" alt="Kimberly" />
+          <div class="text flex-5">
+            <div class="inner">
+              <p>
+                <span>Kimberly Smith</span> commented on your picture
+                <span></span>
+              </p>
+              <p class="time">1 week ago</p>
+            </div>
+            <img
+              class="chess-img"
+              src="/assets/images/image-chess.webp"
+              alt="chess"
+            />
+          </div>
+        </div>
+
+        <div class="box-6 flex">
+          <img src="/assets/images/avatar-nathan-peterson.webp" alt="Nathan" />
+          <div class="text">
+            <p>
+              <span>Nathan Peterson</span> reacted to your recent post
+              <span class="bold-span"
+                >5 end-game strategies to increase your win rate
+              </span>
+              <span></span>
+            </p>
+            <p class="time">2 weeks ago</p>
+          </div>
+        </div>
+
+        <div class="box-7 flex">
+          <img src="/assets/images/avatar-anna-kim.webp" alt="Ana" />
+          <div class="text">
+            <p>
+              <span>Anna Kim</span> left the group
+              <span class="chess">Chess Club</span>
+              <span></span>
+            </p>
+            <p class="time">2 weeks ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Habeebah</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
